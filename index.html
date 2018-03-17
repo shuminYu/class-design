@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZOOM!</title>
+
+    <style>
+    	#canvas{
+    		background:#101010;
+    	}
+    </style>
+
+</head>
+<body>
+<p style="position: absolute; left: 700px; top: 150px; font-size: 15px; font-weight: bold">
+    游戏说明：<br/>
+    <br/>
+    操作：<br/>
+    ↑↓←→:移动<br/>
+    &nbsp;space：选择切换<br/>
+    &nbsp;enter&nbsp;&nbsp;:选择<br/>
+    &nbsp;F5&nbsp;&nbsp;重新开始<br/>
+    <br/>
+    //以下内容看不看并不影响游戏:)<br/>
+    <br/>
+    数据：<br/>
+    分数：每收集一颗星分数+1<br/>
+    生命：初始生命值为3，生命耗尽则gameOver<br/>
+    <br/>
+    其他：<br/>
+    通关条件：规定时间内收集目标数量的星星<br/>
+    生命值减少：触碰怪物<br/>
+    死亡条件：<br/>
+    1.生命值耗尽<br/>
+    2.时间耗尽<br/>
+</p>
+<div style="display: inline">
+    <span id="msg" style="margin: 315px"></span><br>
+    <span id="goal" style="margin-right: 527px"></span>
+    <span id="head" class="head"></span><br>
+    <span id="numberStar" style="margin-right:550px"></span>
+    <span id="numberLife"></span>
+</div>
+
+<div>
+    <audio id="star"  src="mp3/dong.mp3" autobuffer="true"></audio>
+    <audio id="crashs" src="mp3/died.mp3" autobuffer="true"></audio>
+    <audio id="bg1"  src="mp3/Toby Fox - Enemy Approaching.mp3" autobuffer="true" loop></audio>
+    <audio id="YouDie"  src="mp3/Toby Fox - Heartache.mp3" autobuffer="true" loop></audio>
+    <audio id="YouWin"  src="mp3/Toby Fox - Nyeh Heh Heh!.mp3" autobuffer="true" loop></audio>
+    <audio id="Start"  src="mp3/Toby Fox - Start Menu.mp3" autobuffer="true" loop></audio>
+    
+</div>
+<div>
+    <input type="button" name="button" value="🎵" onclick="ControlBgm()">
+</div>
+
+<canvas id="canvas" width="630" height="630" style="border:1px solid black"></canvas>
+<script src="js/requestNextAnimationFrame.js"></script>
+<script src="js/data.js"></script>
+<script src="js/index.js"></script>
+<script src="js/sound.js"></script>
+<script src="js/start.js"></script>
+<script src="js/crash.js"></script>
+<script src="js/drawimage.js"></script>
+<script src="js/move.js"></script>
+</body>
+</html>
